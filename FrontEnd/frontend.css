@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  color: #fff;
+}
+.container {
+  padding: 30px 50px;
+}
+#search-form {
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+}
+#upload-form {
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+}
+#search-form input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+}
+
+#upload-form input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+}
+#search-form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 3em;
+  text-align: center;
+  font-size: 1.75em;
+  cursor: pointer;
+  color: #333;
+}
+@media (max-width: 1200px) {
+  #search-form { width: 50%; }
+  #upload-form { width: 50%; }
+
+}
+@media (max-width: 768px) {
+  .container { padding: 30px 35px; }
+  #search-form { width: 100%; }
+ /* .info { font-size: 0.5rem; } */
+}
+
+.file-upload {
+  background-color: #ffffff;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-input {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+label, input {
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  left: 0;
+  /* position: absolute; */
+  top: 0;
+  width: 100%;
+  border-radius: 5px;          
+}
+
+label {
+  background: #fff;
+  color:#EB6A5A;
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 400;   
+  box-shadow: 0 1px 1px gray;
+}
+
+input[type=file] {
+  opacity: 10;
+}
+
+.mybtn{
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  left: 0;
+  position: relative;
+  top: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  width: 200px;
+  margin-left: 42%;
+  border-radius: 5px;
+  background: #fff;
+  color:#EB6A5A;
+}
+
+#query {
+  width: 800px;
+  height: 50px;
+  margin-left: 18%;
+  margin-right: 18%;
+}
