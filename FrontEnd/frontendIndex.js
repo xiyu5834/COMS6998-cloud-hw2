@@ -35,7 +35,7 @@ function voiceSearch() {
         console.log(speechToText);
       });
   }
- 
+
 }
 
 function readFile(input) {
@@ -86,22 +86,22 @@ function upload() {
     }).catch(function (result) {
       console.log(result);
     });
-  
+
 }
  window.onload = function(){
   var s = document.getElementById("search");
   if(s){
   s.addEventListener("keydown", function (e) {
     console.log(e.code)
-      if (e.code === "ShiftLeft"||e.code=="ShiftRight") {  
+      if (e.code === "ShiftLeft"||e.code=="ShiftRight") {
        search(e);
       }
   });
   }
 };
 
-function search(e) {
-  var searchTerm = e.target.value;
+function search() {
+  var searchTerm = document.getElementById("search").value;
   var apigClient = apigClientFactory.newClient({ apiKey: "6mIjg8JbIpmExQac9AZa5WkoEz2YV6J9crKV1Jk1" });
   var params = {
     "q": searchTerm,
@@ -158,6 +158,3 @@ function showImages(res) {
     }
   }
 }
-
-
-

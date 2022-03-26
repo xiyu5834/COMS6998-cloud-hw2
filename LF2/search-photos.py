@@ -28,8 +28,13 @@ def lambda_handler(event, context):
     photo_set = set()
     ImageUrls = []
     for i in range(len(keys)):
+        temp = keys[i].split(" ")
+        search_keys = []
+        for key in temp:
+            search_keys.append(key.rstrip('s'))
+        modified_keys = ' '.join([str(key) for key in search_keys])
         key = keys[i]
-        url = 'https://search-photos-fi7ljgnh6t7jenzl52sf6tmheu.us-east-1.es.amazonaws.com/photos/_search?q=' + key
+        url = 'https://search-photos-fi7ljgnh6t7jenzl52sf6tmheu.us-east-1.es.amazonaws.com/photos/_search?q=' + modified_keys
         response = requests.get(url,auth=("yxyxy", "Aabc2017!"))
         response = json.loads(response.content.decode('utf-8'))
 
