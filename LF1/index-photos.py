@@ -6,7 +6,7 @@ import requests
 s3_client = boto3.client('s3')
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
-
+#demo test
 def lambda_handler(event, context):
     label_list=[]
     for record in event['Records']:
